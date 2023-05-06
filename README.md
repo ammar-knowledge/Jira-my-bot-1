@@ -7,7 +7,7 @@ This app runs a format check on commit messages and pull request title on the cr
 For example, let's say you specify that a commit message should have a format `DDD:message`. Here D stand for numeric digit. The app checks if the commit message follows this format. If all the commit messages follow this format, the check returns successful, otherwise failure. The reviewer can then decide if they want to go ahead with the code merge.
 
 ### App URL
-https://github.com/apps/My-Ammar-Bot
+https://github.com/apps/My-Bot-Ammar
 
 ## Installation
 
