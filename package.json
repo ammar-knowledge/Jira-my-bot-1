@@ -2,16 +2,19 @@
   "name": "My-Bot-Ammar",
   "version": "3.1.1",
   "description": "An app for validating commit messages and pull requests title",
-  "author": "Anshul Soni <asoni@isystango.com>",
+  "author": "Ammar Ahmed Butt <ammar.butt@atlassiancomnunity.com>",
   "license": "ISC",
-  "repository": "https://github.com/SystangoTechnologies/commit-message-lint.git",
-  "homepage": "https://github.com/SystangoTechnologies/commit-message-lint",
-  "bugs": "https://github.com/SystangoTechnologies/commit-message-lint/issues",
+  "repository": "https://github.com/Ammar-Knowledge/Jira-my-bot-1.git",
+  "homepage": "https://github.com/Ammar-Knowledge/Jira-my-bot-1",
+  "bugs": "https://github.com/Ammar-Knowledge/Jira-my-bot-1/issues",
   "keywords": [
     "probot",
     "github",
     "probot-app",
-    "commit-message-lint"
+    "commit-message-lint",
+    "pr",
+    "commit",
+    "My-Ammar-Bot"
   ],
   "scripts": {
     "dev": "nodemon",
