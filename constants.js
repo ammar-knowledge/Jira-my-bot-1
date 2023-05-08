@@ -1,6 +1,4 @@
-module.exports = {
-  configFileName: process.env.REGEX_CONFIG_FILE_NAME,
-  conclusion_status: {
+module.exports = { configFileName: process.env.REGEX_CONFIG_FILE_NAME, conclusion_status: {
     SUCCESS: 'success',
     FAILURE: 'failure',
     NEUTRAL: 'neutral',
@@ -16,10 +14,8 @@ module.exports = {
     multiple_other_invalid_message: 'other messages are invalid',
     single_other_invalid_message: 'other message is invalid',
     pr_configuration_not_set: 'Pull request title format is not configured',
-    commit_message_configuration_not_set:
-      'Commit message format is not configured',
-    pr_and_commit_message_configuration_not_set:
-      'Pull request title and commit message format are not configured',
+    commit_message_configuration_not_set:  'Commit message format is not configured',
+    pr_and_commit_message_configuration_not_set:  'Pull request title and commit message format are not configured',
     home_page_message: 'Commit Message Lint App'
   },
   CHECK_RUN_STATUS_COMPLETED: 'completed',
@@ -32,8 +28,7 @@ module.exports = {
     commit_id: 'sha:',
     commit_message: 'message:'
   },
-  REGEX: {
-    MERGE_COMMIT_REGEX: '/^(Merge pull request)/'
+  REGEX: { MERGE_COMMIT_REGEX: '/^(Merge pull request)/'
   },
   events: {
     PULL_REQUEST_OPEN: 'pull_request.opened',
