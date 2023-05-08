@@ -1,7 +1,7 @@
 /**
  * Packages
  */
-const rp = require('request-promise')
+const r2 = require('r2')
 /**
  * Constants
  */
@@ -27,7 +27,7 @@ module.exports.getAccessToken = async (req, res) => {
     const query = req.query
     console.log('AccessToken API call started')
     const getAccessToken = `${OAUTH_ENDPOINT}/access_token?client_id=${process.env.CLIENT_ID}&client_secret=${process.env.CLIENT_SECRET}&code=${query.code}&redirect_uri=${process.env.REDIRECT_URI}&state=${query.STATE}`
-    let accessToken = await rp(getAccessToken)
+    let accessToken = await r2(getAccessToken)
     console.log('AccessToken API call completed')
     res.redirect(INSTALLATION_PATH)
   } catch (error) {

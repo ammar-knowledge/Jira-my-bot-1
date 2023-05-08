@@ -11,7 +11,7 @@ const { listCommitsOfPullRequest, getPullRequest } = require('../helpers/pullReq
  * Constants
  */
 const constants = require('../constants.js')
-const rp = require('request-promise')
+const r2 = require('r2')
 const mergeCommitRegex = constants.REGEX.MERGE_COMMIT_REGEX
 const conclusionStatus = constants.conclusion_status
 const messages = constants.messages
