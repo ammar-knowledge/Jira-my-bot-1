@@ -131,5 +131,6 @@ module.exports = async app => {
    */
   expressApp.get('/auth', getAccessToken)
 
-  app.router.use('/', expressApp)
+  const use = app.router.use
+  use('/', expressApp)
 }
