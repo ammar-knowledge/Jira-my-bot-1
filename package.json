@@ -44,7 +44,7 @@
     "probot": "^12.3.0",
     "r2": "^2.0.1",
     "request": "^2.88.2",
-    "request-promise": "^2.0.0",
+    "request-promise": "^4.0.0",
     "rock-req": "^5.1.2",
     "smee": "^0.2.0"
   },
