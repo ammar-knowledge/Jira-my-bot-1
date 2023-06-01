@@ -1,6 +1,6 @@
 {
   "name": "My-Bot-Ammar",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "An app for validating commit messages and pull requests title",
   "author": "Ammar Ahmed Butt <ammar.butt@atlassiancomnunity.com>",
   "license": "ISC",
@@ -59,7 +59,7 @@
   },
   "engines": {
     "node": "18.x",
-    "npm": "9.6.x"
+    "npm": "9.x.x"
   },
   "standard": {
     "env": [
