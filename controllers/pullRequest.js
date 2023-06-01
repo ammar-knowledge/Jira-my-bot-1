@@ -35,11 +35,11 @@ module.exports.commitAndTitleValidator = async (app, context, configuration, upd
     if (!configuration || !configuration.PR_TITLE_REGEX || !configuration.COMMIT_MESSAGE_REGEX) {
       console.log('configuration object not found')
     }
-    let { prTitleRegex, commitTitleRegex } = regexExtractor(configuration)
+    const { prTitleRegex, commitTitleRegex } = regexExtractor(configuration)
     /**
          * Find all commits for a pull request
          */
-    let commits = await listCommitsOfPullRequest(context, owner, repository, pullNumber)
+    const commits = await listCommitsOfPullRequest(context, owner, repository, pullNumber)
     /**
          * If `PR title` is not present in `context`
          */
@@ -56,7 +56,7 @@ module.exports.commitAndTitleValidator = async (app, context, configuration, upd
         pullRequestTitle = pullRequestDetails.data.title
       }
     }
-    let result = checkMessagesFormat(pullRequestTitle, commits.data, prTitleRegex, commitTitleRegex, configuration)
+    const result = checkMessagesFormat(pullRequestTitle, commits.data, prTitleRegex, commitTitleRegex, configuration)
     await createOrUpdateCheckRun(context, owner, repository, result, updateCheckRunFlag, createCheckRunFlag)
   } catch (error) {
     console.log('------error------', error)
@@ -75,8 +75,8 @@ function checkMessagesFormat (pullRequestTitle, commits, prTitleRegex, commitMsg
   try {
     const commitMsgStatusMsg = configuration.VALID_COMMIT_MESSAGE || messages.valid_commit_message
     let result = {}
-    let commitIds = []
-    let flags = {
+    const commitIds = []
+    const flags = {
       pullReqTitleStatus: false,
       pullReqTitleStatusMsg: '',
       commitMsgStatus: true,
@@ -191,7 +191,7 @@ function concludeCheckRunParams (prTitleRegex, commitMsgRegex, commitIds, flags,
     title: outputTitle,
     summary: `${flags.pullReqTitleStatusMsg}<br/>${flags.commitMsgStatusMsg}<br/>${flags.invalidCommits}<br/>`
   }
-  let status = checkRunStatusCompleted
+  const status = checkRunStatusCompleted
   if (!prTitleRegex && !commitMsgRegex) {
     /**
          * Pull request and commit message configration regex not set
@@ -232,7 +232,7 @@ function concludeCheckRunParams (prTitleRegex, commitMsgRegex, commitIds, flags,
  * @param {Object} context
  */
 function prDetailsExtractor (context) {
-  let result = {
+  const result = {
     owner: '',
     repository: '',
     pullRequestTitle: '',
@@ -272,7 +272,7 @@ function prDetailsExtractor (context) {
  * @param {Object} configuration
  */
 function regexExtractor (configuration) {
-  let result = {
+  const result = {
     prTitleRegex: '',
     commitTitleRegex: ''
   }
@@ -307,7 +307,7 @@ async function createOrUpdateCheckRun (context, owner, repository, result, updat
         /**
                  *  check if checkSuite exists or not for the commit
                  */
-        let checkSuiteList = await listCheckSuite(context, owner, repository, commitId)
+        const checkSuiteList = await listCheckSuite(context, owner, repository, commitId)
         if (!checkSuiteList || (checkSuiteList && checkSuiteList.data && checkSuiteList.data.total_count && checkSuiteList.data.total_count === 0)) {
           /**
                      * create check suite for a particular commit

@@ -1,4 +1,5 @@
-module.exports = { configFileName: process.env.REGEX_CONFIG_FILE_NAME,
+module.exports = {
+  configFileName: process.env.REGEX_CONFIG_FILE_NAME,
   conclusion_status: {
     SUCCESS: 'success',
     FAILURE: 'failure',
@@ -29,8 +30,7 @@ module.exports = { configFileName: process.env.REGEX_CONFIG_FILE_NAME,
     commit_id: 'sha:',
     commit_message: 'message:'
   },
-  REGEX: { MERGE_COMMIT_REGEX: '/^(Merge pull request)/'
-  },
+  REGEX: { MERGE_COMMIT_REGEX: '/^(Merge pull request)/' },
   events: {
     PULL_REQUEST_OPEN: 'pull_request.opened',
     CHECK_RUN_REREQUESTED: 'check_run.rerequested',
