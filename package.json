@@ -1,5 +1,5 @@
 {
-  "name": "My-Bot-Ammar",
+  "name": "my-bot-ammar",
   "version": "0.0.2",
   "description": "An app for validating commit messages and pull requests title",
   "author": "Ammar Ahmed Butt <ammar.butt@atlassiancomnunity.com>",
@@ -58,7 +58,7 @@
     "standard": "^17.0.0"
   },
   "engines": {
-    "node": "18.x",
+    "node": "20.x.x",
     "npm": "9.x.x"
   },
   "standard": {
