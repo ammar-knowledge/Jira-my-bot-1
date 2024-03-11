@@ -24,7 +24,7 @@
   "dependencies": {
     "@octokit/app": "^14.0.2",
     "@octokit/auth-app": "^6.0.0",
-    "@octokit/auth-oauth-app": "^7.0.0",
+    "@octokit/auth-oauth-app": "^8.0.0",
     "@probot/octokit-plugin-config": "^3.0.0",
     "app": "^0.1.0",
     "config": "^3.3.8",
