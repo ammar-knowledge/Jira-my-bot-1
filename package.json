@@ -22,8 +22,8 @@
     "lint": "standard --fix"
   },
   "dependencies": {
-    "@octokit/app": "^14.0.2",
-    "@octokit/auth-app": "^6.0.0",
+    "@octokit/app": "^15.0.0",
+    "@octokit/auth-app": "^7.0.0",
     "@octokit/auth-oauth-app": "^8.0.0",
     "@probot/octokit-plugin-config": "^3.0.0",
     "app": "^0.1.0",
@@ -37,7 +37,7 @@
     "minimist": "^1.2.8",
     "moment": "^2.24.0",
     "nconf": "^0.12.0",
-    "node": "^21.0.0",
+    "node": "^22.0.0",
     "optimist": "^0.6.1",
     "pg": "^8.0.0",
     "pip": "^0.0.1",
@@ -58,7 +58,7 @@
     "standard": "^17.0.0"
   },
   "engines": {
-    "node": "21.x",
+    "node": "22.x",
     "npm": "10.x"
   },
   "standard": {
