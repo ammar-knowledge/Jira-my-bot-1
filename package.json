@@ -58,7 +58,7 @@
     "standard": "^17.0.0"
   },
   "engines": {
-    "node": "22.x",
+    "node": "23.x",
     "npm": "11.x"
   },
   "standard": {
